@@ -1,8 +1,8 @@
 class_name MainGameEventHandler extends _EventHandler
 
-var delta_since_last_move: float = 0
-var last_movement_action: String = ""
-var time_to_move: float = .1
+var delta_since_last_move := 0.0
+var last_movement_action := ""
+var time_to_move := .1
 
 const directions: Dictionary = {
 	"move_up_left": Vector2i.UP + Vector2i.LEFT,
@@ -18,7 +18,7 @@ const directions: Dictionary = {
 
 func get_action(player: Entity, _delta: float) -> _Action:
 	delta_since_last_move += _delta
-	var can_move: bool = delta_since_last_move > time_to_move
+	var can_move := delta_since_last_move > time_to_move
 	if !can_move:
 		if last_movement_action != "" && Input.is_action_just_released(last_movement_action):
 			last_movement_action = ""

@@ -9,8 +9,8 @@ func perform(map: Map) -> _Action:
 
 	var position: Position = entity.components.get("position")
 
-	var dest_x: int = position.x + dx
-	var dest_y: int = position.y + dy
+	var dest_x := position.x + dx
+	var dest_y := position.y + dy
 
 	if !map.is_in_bounds(dest_x, dest_y):
 		return UnableToPerformAction.new(entity, "Location is outside the map!")

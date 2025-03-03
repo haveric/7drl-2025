@@ -1,7 +1,7 @@
 class_name Fighter extends _Component
 
 var base_max_hp: int
-var hp: int = -1
+var hp := -1
 var base_defense: int
 var base_power: int
 

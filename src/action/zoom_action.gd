@@ -9,8 +9,8 @@ func _init(_entity: Entity, _direction: ZoomDirection) -> void:
 	direction = _direction
 
 func perform(map: Map) -> _Action:
-	var current_zoom: Vector2 = map.camera.zoom
-	var current_zoom_x: float = current_zoom.x
+	var current_zoom := map.camera.zoom
+	var current_zoom_x := current_zoom.x
 
 	if direction == ZoomDirection.OUT:
 		if current_zoom_x >= 1:

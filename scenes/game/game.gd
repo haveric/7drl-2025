@@ -1,20 +1,18 @@
 class_name Game extends Node2D
 
-@onready var map: Map = $Map
-@onready var input_handler: InputHandler = $InputHandler
-@onready var camera: Camera2D = $PlayerCamera
+@onready var map := $Map
+@onready var input_handler := $InputHandler
+@onready var camera := $PlayerCamera
 
-@onready var tile_map_layer_ground: TileMapLayer = $Map/LayerGround
-@onready var tile_map_layer_item: TileMapLayer = $Map/LayerItem
-@onready var tile_map_layer_furniture: TileMapLayer = $Map/LayerFurniture
-@onready var tile_map_layer_actor: TileMapLayer = $Map/LayerActor
+@onready var tile_map_layer_ground := $Map/LayerGround
+@onready var tile_map_layer_item := $Map/LayerItem
+@onready var tile_map_layer_furniture := $Map/LayerFurniture
+@onready var tile_map_layer_actor := $Map/LayerActor
 
-var tileset_ground: TileSet = TileSet.new()
-var tileset_item: TileSet = TileSet.new()
-var tileset_furniture: TileSet = TileSet.new()
-var tileset_actor: TileSet = TileSet.new()
-
-var resource_entities: ResourceGroup = preload("res://src/entity/entities.tres")
+var tileset_ground := TileSet.new()
+var tileset_item := TileSet.new()
+var tileset_furniture := TileSet.new()
+var tileset_actor := TileSet.new()
 
 var player: Entity
 
@@ -34,7 +32,7 @@ func new_game() -> void:
 func _physics_process(_delta: float) -> void:
 	var action: _Action = input_handler.get_action(player, _delta)
 	if action:
-		var performed_action: _Action = action.perform(map)
+		var performed_action := action.perform(map)
 
 		if performed_action is NoAction:
 			return
@@ -92,8 +90,8 @@ func load_entities_resource(tile_map_layer: TileMapLayer, tileset: TileSet, reso
 	tileset.tile_size = Vector2i(32, 32)
 
 	for asset: String in resources:
-		var file: Resource = load(asset)
-		var s: TileSetAtlasSource = TileSetAtlasSource.new()
+		var file := load(asset)
+		var s := TileSetAtlasSource.new()
 		s.set_texture(file)
 		s.texture_region_size = Vector2i(32,32)
 		s.create_tile(Vector2i.ZERO,Vector2i(1,1))

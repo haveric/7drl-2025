@@ -25,16 +25,16 @@ func init_map(_width: int, _height: int, _player: Entity, _camera: Camera2D) -> 
 	
 	actors.append(player)
 	
-	for i: int in range(5):
-		var x: int = randi_range(0, width - 1)
-		var y: int = randi_range(0, height - 1)
-		var enemy: Entity = EntityLoader.create("enemy", {"position": {"x": x, "y": y}})
+	for i in range(5):
+		var x := randi_range(0, width - 1)
+		var y := randi_range(0, height - 1)
+		var enemy := EntityLoader.create("enemy", {"position": {"x": x, "y": y}})
 		actors.append(enemy)
 
 func generate() -> void:
-	for i: int in width:
-		for j: int in height:
-			var entity: String = "grass"
+	for i in width:
+		for j in height:
+			var entity := "grass"
 			if i > 10 && i < width - 10 && j > 10 && j < height - 10:
 				if randi_range(0, 100) < 20:
 					entity = "crop_plot"
@@ -42,9 +42,9 @@ func generate() -> void:
 			tiles_ground[i][j] = EntityLoader.create(entity, {"position": {"x": i, "y": j}})
 	
 func init_2d_array() -> Array:
-	var array: Array = []
+	var array := []
 	array.resize(width)
-	for i: int in range(width):
+	for i in range(width):
 		array[i] = []
 		array[i].resize(height)
 		

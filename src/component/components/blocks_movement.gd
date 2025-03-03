@@ -1,6 +1,6 @@
 class_name BlocksMovement extends _Component
 
-var blocks_movement:bool = true
+var blocks_movement := true
 
 func _init(json: Dictionary = {}) -> void:
 	super(json, "blocks_movement")

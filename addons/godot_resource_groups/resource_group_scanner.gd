@@ -29,5 +29,3 @@ func _scan(folder:EditorFileSystemDirectory, results:Array[Resource]):
 	# for each file first check if it matches the group definition, before trying to load it
 	for j in folder.get_subdir_count():
 		_scan(folder.get_subdir(j), results)
-
-

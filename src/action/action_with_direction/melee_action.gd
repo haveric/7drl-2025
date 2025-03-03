@@ -43,8 +43,8 @@ func perform(map: Map) -> _Action:
 			blocking_name = blocking_entity.entity_name
 			attack_color = Color(.6, .6, .6)
 
-		var description: String = name + " attack" + plural + " " + blocking_name
-		var damage: int = entity_fighter.base_power - blocking_fighter.base_defense
+		var description := name + " attack" + plural + " " + blocking_name
+		var damage := entity_fighter.base_power - blocking_fighter.base_defense
 		if damage > 0:
 			print(description + " for " + str(damage) + " hit points.")
 			blocking_fighter.take_damage(damage)

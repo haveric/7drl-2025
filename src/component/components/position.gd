@@ -1,7 +1,7 @@
 class_name Position extends _Component
 
-var x:int = -1
-var y:int = -1
+var x := -1
+var y := -1
 
 func _init(json: Dictionary = {}) -> void:
 	super(json, "position")
@@ -14,9 +14,9 @@ func parse_json(json: Dictionary = {}) -> void:
 		if position.has("y"):
 			y = position.y
 
-func move(xOffset: int, yOffset: int) -> void:
-	x += xOffset
-	y += yOffset
+func move(x_offset: int, y_offset: int) -> void:
+	x += x_offset
+	y += y_offset
 
 func distance_to(position: Position) -> int:
 	var dx: int = abs(position.x - x)

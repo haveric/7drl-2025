@@ -1,10 +1,10 @@
 class_name Entity extends Node
 
-var original_json: Dictionary = {}
-var components: Dictionary = {}
+var original_json := {}
+var components := {}
 var entity_name: String
 
-func _init(_json:Dictionary = {}) -> void:
+func _init(_json: Dictionary = {}) -> void:
 	original_json = _json
 	
 	if original_json.has("name"):
