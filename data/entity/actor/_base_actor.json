@@ -1,0 +1,6 @@
+[{
+	"id": "base_actor",
+	"sprite_layer": "actor",
+	"sprite": "assets/unknown.png",
+	"blocks_movement": true
+}]

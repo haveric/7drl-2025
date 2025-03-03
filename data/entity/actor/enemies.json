@@ -1,0 +1,16 @@
+[{
+	"id": "enemy",
+	"name": "Enemy",
+	"extends": "base_actor",
+	"sprite": "assets/actor/enemy.png",
+	"faction": {
+		"factions": ["enemy"],
+		"enemies": ["player"]
+	},
+	"fighter": {
+		"base_max_hp": 4,
+		"base_defense": 0,
+		"base_power": 2
+	},
+	"ai_melee_chase": {}
+}]

@@ -1,0 +1,5 @@
+[{
+	"id": "grass",
+	"extends": "base_ground",
+	"sprite": "assets/ground/grass.png"
+}]

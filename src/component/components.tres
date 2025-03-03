@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://dj0bw1mt8h6nr"]
+
+[ext_resource type="Script" uid="uid://dmbqmqw8o5j1u" path="res://addons/godot_resource_groups/resource_group.gd" id="1_uu4c1"]
+
+[resource]
+script = ExtResource("1_uu4c1")
+base_folder = "res://src/component/components"
+includes = Array[String](["*.gd", "**/*.gd"])
+excludes = Array[String](["_*.gd", "**/_*.gd"])
+paths = Array[String](["res://src/component/components/blocks_movement.gd", "res://src/component/components/fighter.gd", "res://src/component/components/position.gd", "res://src/component/components/faction.gd", "res://src/component/components/ai/ai_melee_chase.gd"])
+metadata/_custom_type_script = "uid://dmbqmqw8o5j1u"

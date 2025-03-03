@@ -1,0 +1,5 @@
+[{
+	"id": "crop_plot",
+	"extends": "base_ground",
+	"sprite": "assets/ground/crop_empty.png"
+}]

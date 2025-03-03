@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://uhak44qfw3lg"]
+
+[ext_resource type="Script" uid="uid://bew616gcdle1a" path="res://scenes/game/game.gd" id="1_sul5r"]
+[ext_resource type="Script" uid="uid://dfa1mgbr6ds7v" path="res://src/event_handler/input_handler.gd" id="2_0sr1o"]
+[ext_resource type="Script" uid="uid://cdx26ajyl5erk" path="res://src/map/map.gd" id="2_7h61r"]
+
+[node name="GameRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game" type="Node2D" parent="."]
+script = ExtResource("1_sul5r")
+
+[node name="InputHandler" type="Node" parent="Game"]
+script = ExtResource("2_0sr1o")
+
+[node name="Map" type="Node2D" parent="Game"]
+script = ExtResource("2_7h61r")
+
+[node name="LayerGround" type="TileMapLayer" parent="Game/Map"]
+
+[node name="LayerItem" type="TileMapLayer" parent="Game/Map"]
+
+[node name="LayerFurniture" type="TileMapLayer" parent="Game/Map"]
+
+[node name="LayerActor" type="TileMapLayer" parent="Game/Map"]
+
+[node name="PlayerCamera" type="Camera2D" parent="Game"]
+zoom = Vector2(2, 2)

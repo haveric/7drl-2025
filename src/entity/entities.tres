@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://cduxppc1qrdmi"]
+
+[ext_resource type="Script" uid="uid://dmbqmqw8o5j1u" path="res://addons/godot_resource_groups/resource_group.gd" id="1_cxacu"]
+
+[resource]
+script = ExtResource("1_cxacu")
+base_folder = "res://data/entity"
+includes = Array[String](["*.json", "**/*.json"])
+excludes = Array[String]([])
+paths = Array[String](["res://data/entity/actor/_base_actor.json", "res://data/entity/actor/enemies.json", "res://data/entity/actor/player.json", "res://data/entity/furniture/_base_furniture.json", "res://data/entity/ground/_base_ground.json", "res://data/entity/ground/crop_plot.json", "res://data/entity/ground/grass.json", "res://data/entity/item/_base_item.json"])
+metadata/_custom_type_script = "uid://dmbqmqw8o5j1u"
